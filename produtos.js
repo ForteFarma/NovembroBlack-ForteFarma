@@ -41,7 +41,7 @@ const produtos = [
         apresentacao: "150 ml • 90 g • Aerossol",
         categoria: "PERFUMARIA",
         descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "Produtos/sport-action.png",
+        imagem: "produtos/sport-action.png",
         precoAntigo: 11.99,
         preco: 6.99,
         condicao: "Consulte disponibilidade nas lojas."
@@ -52,7 +52,7 @@ const produtos = [
         apresentacao: "150 ml • 90 g • Aerossol",
         categoria: "PERFUMARIA",
         descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "Produtos/elegance.png",
+        imagem: "produtos/elegance.png",
         precoAntigo: 11.99,
         preco: 6.99,
         condicao: "Consulte disponibilidade nas lojas."
@@ -63,7 +63,7 @@ const produtos = [
         apresentacao: "150 ml • 90 g • Aerossol",
         categoria: "PERFUMARIA",
         descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "Produtos/excellence.png",
+        imagem: "produtos/excellence.png",
         precoAntigo: 11.99,
         preco: 6.99,
         condicao: "Consulte disponibilidade nas lojas."
@@ -74,7 +74,7 @@ const produtos = [
         apresentacao: "150 ml • 90 g • Aerossol",
         categoria: "PERFUMARIA",
         descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "Produtos/essential.png",
+        imagem: "produtos/essential.png",
         precoAntigo: 11.99,
         preco: 6.99,
         condicao: "Consulte disponibilidade nas lojas."
@@ -88,7 +88,7 @@ const produtos = [
         apresentacao: "150 ml • 90 g • Aerossol",
         categoria: "PERFUMARIA",
         descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "Produtos/infinity.png",
+        imagem: "produtos/infinity.png",
         precoAntigo: 11.99,
         preco: 6.99,
         condicao: "Consulte disponibilidade nas lojas."
@@ -99,7 +99,7 @@ const produtos = [
         apresentacao: "150 ml • 90 g • Aerossol",
         categoria: "PERFUMARIA",
         descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "Produtos/diva.png",
+        imagem: "produtos/diva.png",
         precoAntigo: 11.99,
         preco: 6.99,
         condicao: "Consulte disponibilidade nas lojas."
@@ -110,7 +110,7 @@ const produtos = [
         apresentacao: "150 ml • 90 g • Aerossol",
         categoria: "PERFUMARIA",
         descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "Produtos/inspiration.png",
+        imagem: "produtos/inspiration.png",
         precoAntigo: 11.99,
         preco: 6.99,
         condicao: "Consulte disponibilidade nas lojas."
@@ -121,7 +121,7 @@ const produtos = [
         apresentacao: "150 ml • 90 g • Aerossol",
         categoria: "PERFUMARIA",
         descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "Produtos/sport-action-femme.png",
+        imagem: "produtos/sport-action-femme.png",
         precoAntigo: 11.99,
         preco: 6.99,
         condicao: "Consulte disponibilidade nas lojas."
@@ -135,7 +135,7 @@ const produtos = [
         apresentacao: "120 ml • Suspensão oral • Uso adulto",
         categoria: "ANTIÁCIDO | LAXANTE SUAVE",
         descricao: "Hidróxido de magnésio 8%.",
-        imagem: "Produtos/leite-de-magnesia.png",
+        imagem: "produtos/leite-de-magnesia.png",
         precoAntigo: 19.99,
         preco: 14.99,
         ofertaEspecial: "2 unidades por R$ 19,99",
@@ -150,7 +150,7 @@ const produtos = [
         apresentacao: "Contém 8 absorventes higiênicos",
         categoria: "PERFUMARIA",
         descricao: "Normal com abas, cobertura suave para fluxo moderado.",
-        imagem: "Produtos/definity.png",
+        imagem: "produtos/definity.png",
         precoAntigo: 4.99,
         preco: 2.99,
         condicao: "Consulte disponibilidade nas lojas."
