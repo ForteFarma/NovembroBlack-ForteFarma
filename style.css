@@ -1,251 +1,472 @@
-const whatsappNumero = "5513996613883";
+/* CONFIGURAÇÕES GERAIS */
 
-const mensagemWhatsApp = encodeURIComponent(
-    "Olá! Acessei a página Novembro Black da Forte Farma e gostaria de mais informações sobre as ofertas."
-);
+:root {
+    --preto: #080808;
+    --preto-claro: #151515;
+    --laranja: #ff7900;
+    --azul: #0878c9;
+    --branco: #ffffff;
+    --cinza: #bdbdbd;
+}
 
-const linkWhatsApp = `https://wa.me/${whatsappNumero}?text=${mensagemWhatsApp}`;
-const produtos = [
-    {
-        nome: "Expert Memory",
-        marca: "Green Life is Good",
-        apresentacao: "60 cápsulas • 500 mg • 30 g",
-        categoria: "SUPLEMENTO ALIMENTAR",
-        descricao: "Fórmula com alecrim, ashwagandha, camomila, cúrcuma, gengibre, ginkgo biloba, ginseng, hortelã e sálvia.",
-        imagem: "produtos/expert-memory.jpg",
-        precoAntigo: 69.90,
-        preco: 59.99,
-        condicao: "Consulte disponibilidade nas lojas."
-    },
-    {
-        nome: "Dor Zero",
-        marca: "Green Life is Good",
-        apresentacao: "60 cápsulas • 500 mg • 30 g",
-        categoria: "SUPLEMENTO ALIMENTAR",
-        descricao: "Com alho, bacurina, colágeno tipo II, gengibre, manacá, mureré, quebra-pedra, sucupira, salsaparrilha, vitamina D3 e vitamina K2.",
-        imagem: "produtos/dor-zero.jpg",
-        precoAntigo: 69.90,
-        preco: 59.99,
-        condicao: "Consulte disponibilidade nas lojas."
-    },
-    {
-        nome: "Gel Pescador",
-        marca: "Anil Cosméticos",
-        apresentacao: "250 g",
-        categoria: "COSMÉTICOS",
-        descricao: "Gel com óleo de peixe, arnica e castanha-da-índia.",
-        imagem: "produtos/gel-pescador.jpg",
-        precoAntigo: 59.99,
-        preco: 39.90,
-        condicao: "Consulte disponibilidade nas lojas."
-    },
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    // LINHA NUAGE MASCULINA
+html {
+    scroll-behavior: smooth;
+}
 
-    {
-        nome: "Sport Action",
-        marca: "Nuage Masculino",
-        apresentacao: "150 ml • 90 g • Aerossol",
-        categoria: "PERFUMARIA",
-        descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "produtos/sport-action.png",
-        precoAntigo: 11.99,
-        preco: 6.99,
-        condicao: "Consulte disponibilidade nas lojas."
-    },
-    {
-        nome: "Elegance",
-        marca: "Nuage Masculino",
-        apresentacao: "150 ml • 90 g • Aerossol",
-        categoria: "PERFUMARIA",
-        descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "produtos/elegance.png",
-        precoAntigo: 11.99,
-        preco: 6.99,
-        condicao: "Consulte disponibilidade nas lojas."
-    },
-    {
-        nome: "Excellence",
-        marca: "Nuage Masculino",
-        apresentacao: "150 ml • 90 g • Aerossol",
-        categoria: "PERFUMARIA",
-        descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "produtos/excellence.png",
-        precoAntigo: 11.99,
-        preco: 6.99,
-        condicao: "Consulte disponibilidade nas lojas."
-    },
-    {
-        nome: "Essential",
-        marca: "Nuage Masculino",
-        apresentacao: "150 ml • 90 g • Aerossol",
-        categoria: "PERFUMARIA",
-        descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "produtos/essential.png",
-        precoAntigo: 11.99,
-        preco: 6.99,
-        condicao: "Consulte disponibilidade nas lojas."
-    },
+body {
+    background: var(--preto);
+    color: var(--branco);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
 
-    // LINHA NUAGE FEMININA
 
-    {
-        nome: "Infinity",
-        marca: "Nuage Feminino",
-        apresentacao: "150 ml • 90 g • Aerossol",
-        categoria: "PERFUMARIA",
-        descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "produtos/infinity.png",
-        precoAntigo: 11.99,
-        preco: 6.99,
-        condicao: "Consulte disponibilidade nas lojas."
-    },
-    {
-        nome: "Diva",
-        marca: "Nuage Feminino",
-        apresentacao: "150 ml • 90 g • Aerossol",
-        categoria: "PERFUMARIA",
-        descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "produtos/diva.png",
-        precoAntigo: 11.99,
-        preco: 6.99,
-        condicao: "Consulte disponibilidade nas lojas."
-    },
-    {
-        nome: "Inspiration",
-        marca: "Nuage Feminino",
-        apresentacao: "150 ml • 90 g • Aerossol",
-        categoria: "PERFUMARIA",
-        descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "produtos/inspiration.png",
-        precoAntigo: 11.99,
-        preco: 6.99,
-        condicao: "Consulte disponibilidade nas lojas."
-    },
-    {
-        nome: "Sport Action",
-        marca: "Nuage Feminino",
-        apresentacao: "150 ml • 90 g • Aerossol",
-        categoria: "PERFUMARIA",
-        descricao: "Antitranspirante com 48h de proteção, jato seco sem álcool.",
-        imagem: "produtos/sport-action-femme.png",
-        precoAntigo: 11.99,
-        preco: 6.99,
-        condicao: "Consulte disponibilidade nas lojas."
-    },
+/* FAIXAS ANIMADAS */
 
-    // LEITE DE MAGNÉSIA
+.faixa {
+    width: 100%;
+    overflow: hidden;
+    background: var(--laranja);
+    color: var(--preto);
+    padding: 13px 0;
+    transform: rotate(-1deg) scale(1.02);
+    margin: 12px 0;
+}
 
-    {
-        nome: "Leite de Magnésia",
-        marca: "Uniphar",
-        apresentacao: "120 ml • Suspensão oral • Uso adulto",
-        categoria: "ANTIÁCIDO | LAXANTE SUAVE",
-        descricao: "Hidróxido de magnésio 8%.",
-        imagem: "produtos/leite-de-magnesia.png",
-        precoAntigo: 19.99,
-        preco: 14.99,
-        ofertaEspecial: "2 unidades por R$ 19,99",
-        condicao: "Consulte disponibilidade nas lojas."
-    },
+.faixa-conteudo {
+    width: max-content;
+    white-space: nowrap;
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    animation: deslizar 25s linear infinite;
+}
 
-    // ABSORVENTE DEFINITY
+.faixa-azul {
+    background: var(--azul);
+    color: white;
+    transform: rotate(1deg) scale(1.02);
+}
 
-    {
-        nome: "Absorvente Definity",
-        marca: "Definity",
-        apresentacao: "Contém 8 absorventes higiênicos",
-        categoria: "PERFUMARIA",
-        descricao: "Normal com abas, cobertura suave para fluxo moderado.",
-        imagem: "produtos/definity.png",
-        precoAntigo: 4.99,
-        preco: 2.99,
-        condicao: "Consulte disponibilidade nas lojas."
+.faixa-reversa {
+    animation: deslizar-inverso 25s linear infinite;
+}
+
+@keyframes deslizar {
+    from {
+        transform: translateX(0);
     }
-];
 
-const grade = document.getElementById("gradeProdutos");
-
-function formatarPreco(valor) {
-    return valor.toLocaleString("pt-BR", {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
+    to {
+        transform: translateX(-50%);
+    }
 }
 
-function carregarProdutos() {
-    grade.innerHTML = produtos.map(produto => {
+@keyframes deslizar-inverso {
+    from {
+        transform: translateX(-50%);
+    }
 
-        const mensagem = encodeURIComponent(
-            `Olá! Acessei a Novembro Black da Forte Farma e tenho interesse no produto ${produto.nome}, por R$ ${formatarPreco(produto.preco)}. Gostaria de mais informações sobre a disponibilidade.`
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* CABEÇALHO */
+
+.topo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.selo {
+    border: 1px solid var(--laranja);
+    color: var(--laranja);
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* DESTAQUE PRINCIPAL */
+
+.hero {
+    min-height: 480px;
+    padding: 90px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 121, 0, 0.13),
+            transparent 60%
         );
-
-        const linkProduto = `https://wa.me/${whatsappNumero}?text=${mensagem}`;
-
-        return `
-        <article class="produto">
-
-            <div class="produto-imagem">
-                <span class="desconto">OFERTA BLACK</span>
-
-                <img
-                    src="${produto.imagem}"
-                    alt="${produto.nome}"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="produto-info">
-
-                <span class="categoria">
-                    ${produto.categoria}
-                </span>
-
-                <h3>${produto.nome}</h3>
-
-                <p class="marca">
-                    ${produto.marca} • ${produto.apresentacao}
-                </p>
-
-                <p class="descricao-produto">
-                    ${produto.descricao}
-                </p>
-
-                <p class="preco-antigo">
-                    De R$ ${formatarPreco(produto.precoAntigo)}
-                </p>
-
-                <p class="preco">
-                    <small>R$</small> ${formatarPreco(produto.preco)}
-                </p>
-
-                ${produto.ofertaEspecial ? `
-                    <p class="oferta-especial">
-                        ${produto.ofertaEspecial}
-                    </p>
-                ` : ""}
-
-                <p class="condicao">
-                    ${produto.condicao}
-                </p>
-
-                <a
-                    href="${linkProduto}"
-                    class="botao-whatsapp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <i class="fa-brands fa-whatsapp"></i>
-                    COMPRAR PELO WHATSAPP
-                </a>
-
-            </div>
-        </article>
-        `;
-    }).join("");
 }
 
-carregarProdutos();
+.subtitulo {
+    color: var(--laranja);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
 
-document.getElementById("whatsappBtn").href = linkWhatsApp;
+.hero h1 {
+    font-size: clamp(55px, 10vw, 115px);
+    font-weight: 1000;
+    line-height: 0.9;
+    letter-spacing: -5px;
+}
 
+.hero h1 span {
+    display: block;
+    color: var(--laranja);
+    text-shadow: 5px 5px 0 rgba(255, 121, 0, 0.15);
+}
+
+.descricao {
+    margin-top: 25px;
+    color: var(--cinza);
+    font-size: 17px;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 17px 35px;
+    background: var(--laranja);
+    color: var(--preto);
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+
+/* ÁREA DE OFERTAS */
+
+.ofertas {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 5%;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-secao span {
+    color: var(--laranja);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.titulo-secao h2 {
+    font-size: clamp(35px, 6vw, 55px);
+    margin: 12px 0;
+}
+
+.titulo-secao strong {
+    color: var(--laranja);
+}
+
+.titulo-secao p {
+    color: var(--cinza);
+}
+
+
+/* CARDS DOS PRODUTOS */
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.produto {
+    background: var(--preto-claro);
+    border: 1px solid #292929;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-7px);
+    border-color: var(--laranja);
+}
+
+.produto-imagem {
+    height: 280px;
+    background: #ffffff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.desconto {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+    background: var(--laranja);
+    color: black;
+    padding: 8px 12px;
+    font-size: 11px;
+    font-weight: 900;
+    border-radius: 4px;
+}
+
+.produto-info {
+    padding: 22px;
+}
+
+.categoria {
+    color: var(--azul);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.produto-info h3 {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.preco-antigo {
+    color: #888;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+.preco {
+    color: var(--laranja);
+    font-size: 38px;
+    font-weight: 900;
+    margin-top: 5px;
+}
+
+.preco small {
+    font-size: 17px;
+}
+
+.condicao {
+    color: var(--cinza);
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+
+/* AVISO FINAL */
+
+.aviso {
+    background: var(--laranja);
+    color: var(--preto);
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.aviso h2 {
+    font-size: clamp(23px, 4vw, 35px);
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.aviso p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* RODAPÉ */
+
+.rodape {
+    padding: 40px 20px;
+    text-align: center;
+    background: #050505;
+}
+
+.logo-rodape {
+    width: 140px;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.rodape p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rodape span {
+    color: #777;
+    font-size: 11px;
+}
+
+
+/* ADAPTAÇÃO PARA CELULARES */
+
+@media (max-width: 700px) {
+
+    .topo {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .hero {
+        min-height: 390px;
+        padding: 70px 18px;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .subtitulo {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .descricao {
+        font-size: 14px;
+        line-height: 1.6;
+        max-width: 320px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .produto-imagem {
+        height: 250px;
+    }
+
+    .ofertas {
+        margin: 65px auto;
+    }
+
+    .faixa-conteudo {
+        font-size: 13px;
+    }
+
+    .selo {
+        font-size: 10px;
+    }
+
+}
+
+
+/* ACESSIBILIDADE: REDUZIR ANIMAÇÕES */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* INFORMAÇÕES ADICIONAIS DOS PRODUTOS */
+
+.marca {
+    color: #bdbdbd;
+    font-size: 12px;
+    margin-top: -5px;
+}
+
+.descricao-produto {
+    color: #d0d0d0;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 12px 0;
+}
+
+.produto-info {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.condicao {
+    margin-top: auto;
+    padding-top: 12px;
+}
+.botao-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 18px;
+    padding: 13px 10px;
+    background: #168b4b;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.botao-whatsapp:hover {
+    background: #20aa60;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.botao-whatsapp i {
+    font-size: 19px;
+}
