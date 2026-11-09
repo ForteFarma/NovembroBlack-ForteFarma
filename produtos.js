@@ -1,3 +1,10 @@
+const whatsappNumero = "5513996613883";
+
+const mensagemWhatsApp = encodeURIComponent(
+    "Olá! Acessei a página Novembro Black da Forte Farma e gostaria de mais informações sobre as ofertas."
+);
+
+const linkWhatsApp = `https://wa.me/${whatsappNumero}?text=${mensagemWhatsApp}`;
 const produtos = [
     {
         nome: "Expert Memory",
@@ -167,7 +174,15 @@ function formatarPreco(valor) {
 }
 
 function carregarProdutos() {
-    grade.innerHTML = produtos.map(produto => `
+    grade.innerHTML = produtos.map(produto => {
+
+        const mensagem = encodeURIComponent(
+            `Olá! Acessei a Novembro Black da Forte Farma e tenho interesse no produto ${produto.nome}, por R$ ${formatarPreco(produto.preco)}. Gostaria de mais informações sobre a disponibilidade.`
+        );
+
+        const linkProduto = `https://wa.me/${whatsappNumero}?text=${mensagem}`;
+
+        return `
         <article class="produto">
 
             <div class="produto-imagem">
@@ -214,9 +229,23 @@ function carregarProdutos() {
                     ${produto.condicao}
                 </p>
 
+                <a
+                    href="${linkProduto}"
+                    class="botao-whatsapp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-whatsapp"></i>
+                    COMPRAR PELO WHATSAPP
+                </a>
+
             </div>
         </article>
-    `).join("");
+        `;
+    }).join("");
 }
 
 carregarProdutos();
+
+document.getElementById("whatsappBtn").href = linkWhatsApp;
+
